@@ -2,7 +2,7 @@
 
 An interactive map tracking **$700B+** in AI data center construction projects worldwide. Explore facilities being built by OpenAI, Meta, Google, Microsoft, Amazon, xAI, Anthropic, and more.
 
-[**Live Demo**](#) &nbsp;&middot;&nbsp; [**Data Sources**](#data)
+[**Live Demo**](https://ai-data-centers-map.vercel.app/) &nbsp;&middot;&nbsp; [**Data Sources**](#data)
 
 ---
 
