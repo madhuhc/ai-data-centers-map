@@ -1,0 +1,176 @@
+/* style.css — AI Data Centers Map Design Tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Fonts */
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type Scale */
+  --text-xs:   clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  --text-sm:   clamp(0.8125rem, 0.75rem + 0.3vw, 0.9375rem);
+  --text-base: clamp(0.9375rem, 0.85rem + 0.4vw, 1.0625rem);
+  --text-lg:   clamp(1.0625rem, 0.9rem + 0.7vw, 1.375rem);
+  --text-xl:   clamp(1.375rem, 0.95rem + 1.2vw, 2rem);
+  --text-2xl:  clamp(1.75rem, 1.1rem + 2vw, 3rem);
+  --text-3xl:  clamp(2.25rem, 0.9rem + 3.5vw, 4.5rem);
+  --text-hero: clamp(2.75rem, 0.5rem + 6vw, 7rem);
+
+  /* 4px Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Content widths */
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+  --content-full: 100%;
+}
+
+/* DARK MODE (default for this dashboard) */
+:root, [data-theme="dark"] {
+  /* Surfaces — deep charcoal */
+  --color-bg:             #0d0f12;
+  --color-surface:        #131620;
+  --color-surface-2:      #181c28;
+  --color-surface-offset: #1a1e2a;
+  --color-surface-offset-2: #1f2433;
+  --color-surface-dynamic: #262c3e;
+  --color-divider:        #2a3045;
+  --color-border:         #333a52;
+
+  /* Text */
+  --color-text:           #e0e4ef;
+  --color-text-muted:     #8891a8;
+  --color-text-faint:     #525c76;
+  --color-text-inverse:   #0d0f12;
+
+  /* Primary (Cool Blue-Teal) */
+  --color-primary:        #3ecfcf;
+  --color-primary-hover:  #2bb8b8;
+  --color-primary-active: #1d9e9e;
+  --color-primary-highlight: #1a2e35;
+
+  /* Accent Amber/Gold */
+  --color-warning:        #f0a030;
+  --color-warning-hover:  #d88a20;
+  --color-warning-active: #bf7510;
+  --color-warning-highlight: #2e2518;
+
+  /* Error */
+  --color-error:          #ef4444;
+  --color-error-hover:    #dc2626;
+  --color-error-active:   #b91c1c;
+  --color-error-highlight: #2e1a1a;
+
+  /* Success */
+  --color-success:        #34d399;
+  --color-success-hover:  #10b981;
+  --color-success-active: #059669;
+  --color-success-highlight: #1a2e25;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.4);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.5);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] {
+  --color-bg:             #f5f6fa;
+  --color-surface:        #ffffff;
+  --color-surface-2:      #fafbfc;
+  --color-surface-offset: #eef0f5;
+  --color-surface-offset-2: #e5e8f0;
+  --color-surface-dynamic: #d8dce8;
+  --color-divider:        #cdd2e0;
+  --color-border:         #bbc1d4;
+
+  --color-text:           #1a1e2a;
+  --color-text-muted:     #5a6178;
+  --color-text-faint:     #9098b0;
+  --color-text-inverse:   #f5f6fa;
+
+  --color-primary:        #0e8a8a;
+  --color-primary-hover:  #0a7070;
+  --color-primary-active: #065555;
+  --color-primary-highlight: #d0eef0;
+
+  --color-warning:        #c47f18;
+  --color-warning-hover:  #a86a10;
+  --color-warning-active: #8d5508;
+  --color-warning-highlight: #fdf3e0;
+
+  --color-error:          #dc2626;
+  --color-error-hover:    #b91c1c;
+  --color-error-active:   #991b1b;
+  --color-error-highlight: #fee2e2;
+
+  --color-success:        #059669;
+  --color-success-hover:  #047857;
+  --color-success-active: #065f46;
+  --color-success-highlight: #d1fae5;
+
+  --shadow-sm: 0 1px 2px oklch(0.3 0 0 / 0.08);
+  --shadow-md: 0 4px 12px oklch(0.3 0 0 / 0.1);
+  --shadow-lg: 0 12px 32px oklch(0.3 0 0 / 0.14);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --color-bg:             #f5f6fa;
+    --color-surface:        #ffffff;
+    --color-surface-2:      #fafbfc;
+    --color-surface-offset: #eef0f5;
+    --color-surface-offset-2: #e5e8f0;
+    --color-surface-dynamic: #d8dce8;
+    --color-divider:        #cdd2e0;
+    --color-border:         #bbc1d4;
+    --color-text:           #1a1e2a;
+    --color-text-muted:     #5a6178;
+    --color-text-faint:     #9098b0;
+    --color-text-inverse:   #f5f6fa;
+    --color-primary:        #0e8a8a;
+    --color-primary-hover:  #0a7070;
+    --color-primary-active: #065555;
+    --color-primary-highlight: #d0eef0;
+    --color-warning:        #c47f18;
+    --color-warning-hover:  #a86a10;
+    --color-warning-active: #8d5508;
+    --color-warning-highlight: #fdf3e0;
+    --color-error:          #dc2626;
+    --color-error-hover:    #b91c1c;
+    --color-error-active:   #991b1b;
+    --color-error-highlight: #fee2e2;
+    --color-success:        #059669;
+    --color-success-hover:  #047857;
+    --color-success-active: #065f46;
+    --color-success-highlight: #d1fae5;
+    --shadow-sm: 0 1px 2px oklch(0.3 0 0 / 0.08);
+    --shadow-md: 0 4px 12px oklch(0.3 0 0 / 0.1);
+    --shadow-lg: 0 12px 32px oklch(0.3 0 0 / 0.14);
+  }
+}
